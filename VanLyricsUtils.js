@@ -102,9 +102,11 @@ var VanLyricsUtils = (function() {
         // Scroll to the center position
         currentScrollCenterPosition = centerPosition;
         lyricsContainer.scrollTo({
-          top: currentScrollCenterPosition,
+          top: currentScrollCenterPosition - containerHeight,
           behavior: 'smooth'
         });
+
+        console.log(currentHighlightedIndex, currentScrollCenterPosition, containerHeight, containerScrollTop, activeLineOffsetTop, activeLineHeight, centerPosition);
       }
   
     }
