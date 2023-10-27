@@ -87,6 +87,10 @@ Pauses the lyrics timer.
 
 Resumes the lyrics timer from the paused state.
 
+## `setLyricsAutoScrolling(isEnabled)`
+
+Sets lyrics auto-scrolling.
+
 ### `runUnitTest()`
 
 Runs the unit tests for VanLyricsUtils.

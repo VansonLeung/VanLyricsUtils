@@ -28,11 +28,19 @@
   </head>
   <body>
     <div id="lyrics-container"></div>
+    <label for="autoscroll">Auto scroll</label>
+    <input type="checkbox" id="autoscroll" checked="checked" />
     <script>
       var inputText = "  \n[00:00.04] Mummy don't know daddy's getting hot\n[00:03.14] At the body shop, doing something unholy\n[00:09.34] He lucky, lucky, yeah (ooh)\n[00:13.10] He lucky, lucky, yeah (ye-yeah)\n[00:16.70] He lucky, lucky, yeah\n[00:20.39] He lucky, lucky, yeah\n[00:21.66] A lucky, lucky girl\n[00:24.06] She got married to a boy like you\n[00:27.64] She'd kick you out if she ever, ever knew\n[00:31.25] 'Bout all the - you tell me that you do\n[00:36.45] Dirty, dirty boy\n[00:38.62] You know everyone is talking on the scene\n[00:42.38] I hear them whispering 'bout the places that you've been\n[00:45.98] And how you don't know how to keep your business clean\n[00:51.20] Mummy don't know daddy's getting hot\n[00:54.55] At the body shop, doing something unholy\n[00:58.50] He's sat back while she's dropping it, she be popping it\n[01:03.47] Yeah, she put it down slowly\n[01:05.86] Oh-ee-oh-ee-oh, he left his kids at\n[01:09.47] Ho-ee-oh-ee-ome, so he can get that\n[01:13.18] Mummy don't know daddy's getting hot\n[01:16.53] At the body shop, doing something unholy (woo)\n[01:20.50] Mmm, daddy, daddy, if you want it, drop the add'y (yuh)\n[01:23.74] Give me love, give me Fendi, my Balenciaga daddy\n[01:27.11] You gon' need to bag it up, 'cause I'm spending on Rodeo (woo)\n[01:31.03] You can watch me back it up, I'll be gone in the a.m.\n[01:34.74] And he, he get me Prada, get me Miu Miu like Rihanna (ah)\n[01:39.14] He always call me 'cause I never cause no drama\n[01:42.75] And when you want it, baby, I know I got you covered\n[01:46.41] And when you need it, baby, just jump under the covers\n[01:49.87] Mummy don't know daddy's getting hot\n[01:52.98] At the body shop, doin' somethin' unholy\n[01:57.17] He's sat back while she's dropping it, she be popping it\n[02:02.20] Yeah, she put it down slowly\n[02:04.57] Oh-ee-oh-ee-oh, he left his kids at\n[02:08.16] Ho-ee-oh-ee-ome, so he can get that\n[02:11.88] Mummy don't know daddy's getting hot\n[02:14.95] At the body shop, doin' something unholy\n[02:18.22] \n";
       VanLyricsUtils.setupLyricsContainer("#lyrics-container");
       VanLyricsUtils.loadLyrics(inputText);
       VanLyricsUtils.startLyricsTimer();
+      
+      var autoscrollCheckbox = document.getElementById('autoscroll');
+      autoscrollCheckbox.addEventListener('change', function() {
+        VanLyricsUtils.setLyricsAutoScrolling(autoscrollCheckbox.checked);
+      });
+      
     </script>
   </body>
 </html>

@@ -2,45 +2,24 @@
  * VanLyricsUtils.js
  * Author: Vanson Leung
  * Copyright (c) 2023. All rights reserved.
-
+ *
  * Example usage:
 
-<!-- HTML Installation -->
-<!DOCTYPE html>
-<html>
-<head>
-  <!-- Other head elements -->
-  <script src="VanLyricsUtils.js"></script>
-</head>
-<body>
-  <!-- Your HTML content -->
-  <script> 
-    <!-- run the lyrics util code here -->
-  </script>
-</body>
-</html>
-
- * 
- * // Set up the lyrics container
- * VanLyricsUtils.setupLyricsContainer('#lyrics-container');
- * 
- * // Load the lyrics from the provided input text
- * VanLyricsUtils.loadLyrics('  \n[00:00.04] Mummy don't know daddy's getting hot\n[00:03.14] At the body shop, doing something unholy\n ..... ');
- * 
- * // Start the lyrics timer
- * VanLyricsUtils.startLyricsTimer();
- * 
- * // Pause the lyrics timer
- * VanLyricsUtils.pauseLyricsTimer();
- * 
- * // Resume the lyrics timer
- * VanLyricsUtils.resumeLyricsTimer();
- * 
- * // Stop the lyrics timer
- * VanLyricsUtils.stopLyricsTimer();
- * 
- * // Skip the lyrics timer to the specified time in milliseconds.
- * VanLyricsUtils.skipToTime(20000);
+ *  <!-- HTML Installation -->
+ *  <!DOCTYPE html>
+ *  <html>
+ *  <head>
+ *    <!-- Other head elements -->
+ *    <script src="VanLyricsUtils.js"></script>
+ *  </head>
+ *  <body>
+ *    <!-- Your HTML content -->
+ *    <script> 
+ *      <!-- run the lyrics util code here -->
+ *    </script>
+ *  </body>
+ *  </html>
+ *
  */
  
 
@@ -141,6 +120,7 @@ var VanLyricsUtils = (function() {
   var timeSkip = 0;
   var isPaused = false;
   var currentScrollCenterPosition = -1;
+  var isAutoScroll = true;
 
 
   var lyricsTimer = setInterval(function () {
@@ -153,7 +133,9 @@ var VanLyricsUtils = (function() {
     // console.log(timeElapsed, timeSkip, isPaused);
     currentHighlightedIndex = getCurrentHighlightedLineIndex(currentTimestamp);
     highlightLyricLine(currentHighlightedIndex);
-    scrollToLyricLine(currentHighlightedIndex);
+    if (isAutoScroll) {
+      scrollToLyricLine(currentHighlightedIndex);
+    }
   }, 100);
 
 
@@ -242,6 +224,13 @@ var VanLyricsUtils = (function() {
   };
 
   /**
+   * Sets lyrics auto-scrolling.
+   */
+  var setLyricsAutoScrolling = function setLyricsAutoScrolling(isEnabled) {
+    isAutoScroll = isEnabled;
+  };
+
+  /**
    * Runs the unit test for the functions.
    */
   var runUnitTest = function runUnitTest() {
@@ -304,6 +293,7 @@ var VanLyricsUtils = (function() {
     pauseLyricsTimer: pauseLyricsTimer,
     resumeLyricsTimer: resumeLyricsTimer,
     runUnitTest: runUnitTest,
+    setLyricsAutoScrolling: setLyricsAutoScrolling,
   }
 
 })();
