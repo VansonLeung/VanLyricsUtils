@@ -89,7 +89,7 @@ Pauses the lyrics timer.
 
 Resumes the lyrics timer from the paused state.
 
-## `setLyricsAutoScrolling(isEnabled)`
+### `setLyricsAutoScrolling(isEnabled)`
 
 Sets lyrics auto-scrolling.
 
