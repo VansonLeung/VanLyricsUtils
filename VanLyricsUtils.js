@@ -69,7 +69,7 @@ var VanLyricsUtils = (function() {
         lyric = _ref.lyric;
       var isActive = currentTimestamp >= timestamp && currentTimestamp < lyrics[index + 1].timestamp;
       var lineElement = document.createElement("div");
-      lineElement.innerText = "".concat(lyric, " ").concat(isActive);
+      lineElement.innerText = lyric;
       lineElement.classList.add("lyric-line");
       lyricsContainer.appendChild(lineElement);
       lyrics[index].element = lineElement;
