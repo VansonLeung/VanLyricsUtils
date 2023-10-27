@@ -98,4 +98,4 @@ Runs the unit tests for VanLyricsUtils.
 
 ## License
 
-This project is licensed under the [License Name] - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT - see [https://github.com/VansonLeung/VanLyricsUtils/blob/main/LICENSE](https://github.com/VansonLeung/VanLyricsUtils/blob/main/LICENSE) file for details.
