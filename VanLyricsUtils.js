@@ -90,25 +90,27 @@ var VanLyricsUtils = (function() {
     }
 
     if (index >= 0 && index < lyrics.length) {
-      var activeLine = lyrics[index].element;
-      var containerHeight = lyricsContainer.clientHeight;
-      var containerScrollTop = lyricsContainer.scrollTop;
-      var activeLineOffsetTop = activeLine.offsetTop;
-      var activeLineHeight = activeLine.clientHeight;
-  
-      // Calculate the center position of the active line
-      var centerPosition = activeLineOffsetTop - (containerHeight - activeLineHeight) / 2;
-      if (currentScrollCenterPosition != centerPosition) {
-        // Scroll to the center position
-        currentScrollCenterPosition = centerPosition;
-        lyricsContainer.scrollTo({
-          top: currentScrollCenterPosition - containerHeight,
-          behavior: 'smooth'
-        });
 
-        console.log(currentHighlightedIndex, currentScrollCenterPosition, containerHeight, containerScrollTop, activeLineOffsetTop, activeLineHeight, centerPosition);
-      }
+      if (previousScrollHighlightedIndex != index) {
+        previousScrollHighlightedIndex = index;
+
+        var activeLine = lyrics[index].element;
+        var activeLineHeight = activeLine.clientHeight;
+        var activeLineOffsetTop = activeLine.offsetTop - lyricsContainer.offsetTop + (activeLineHeight / 2)
   
+        var containerHeight = lyricsContainer.clientHeight;
+    
+        // Calculate the center position of the active line
+        var centerPosition = activeLineOffsetTop - (containerHeight) / 2;
+        // console.log("ASDSAD", containerHeight, activeLineHeight, "A:", activeLine.getBoundingClientRect().top, "B:", lyricsContainer.getBoundingClientRect().top, activeLineOffsetTop, centerPosition);
+        window.aal = activeLine;
+        // Scroll to the center position
+        lyricsContainer.scrollTo({
+          top: centerPosition,
+          behavior: 'smooth',
+        });
+      }
+
     }
 
   };
@@ -121,7 +123,7 @@ var VanLyricsUtils = (function() {
   var timeElapsed = endTime - startTime;
   var timeSkip = 0;
   var isPaused = false;
-  var currentScrollCenterPosition = -1;
+  var previousScrollHighlightedIndex = -1;
   var isAutoScroll = true;
 
 
@@ -149,6 +151,7 @@ var VanLyricsUtils = (function() {
    */
   var setupLyricsContainer = function setupLyricsContainer(selector) {
     lyricsContainer = document.querySelector(selector);
+    window.lc = lyricsContainer;
   };
 
 

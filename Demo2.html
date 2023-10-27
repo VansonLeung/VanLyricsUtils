@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="icon" href="favicon.png">
+<TITLE> A.I. 新聞 + 歌詞（Van 仔 API) + Thx Didi & Yan</TITLE>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/font.css">
+<style type="text/css">
+.lyrics * {
+  font-size: 16px;
+
+  }
+
+th, td {
+  padding-top: 1px;
+  padding-bottom: 0px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+div.a {
+  font-size: 60%;
+}
+
+div.b {
+  font-size: 120%;
+}
+
+div.c {
+  font-size: 140%;
+}
+
+div.d {
+  font-size: 200%;
+}
+
+div.e {
+  font-size: small;
+   background-color: yellow;
+}
+
+
+p {
+  font-family: verdana;
+  font-size: 24px;
+}
+
+
+a {
+  color: hotpink;
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+    -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#rcorners2 {
+	font-size: 24px;
+	font-family: sans-serif;
+	color: grey;
+  border-radius: 15px;
+  border: 1px solid #FF69B4;
+    margin-top: 20px;
+    margin-bottom: 15px;
+  width: 330px;
+  height: 34px;
+}
+
+.slider
+{
+    width: 300px;
+}
+</style>
+</head>
+
+
+      
+<body>
+
+<center>
+<table border="0" bgcolor="#f0f0f0"><tr><td bgcolor="#f0f0f0"><center>
+<font color="#777777"><p class="indicator">
+愛因斯坦</font>
+
+</center></td></tr></table>
+<table border="0" width="93%"><tr><td><center>
+<p class="indicator">真正使我感興趣的是上帝創造世界的時候有沒有別的方案可選。</center></td></tr></table>
+
+<div>
+<img width="350" src="https://i.scdn.co/image/ab67616d0000b27329d9627ff5c88d037100e417"><BR><div class="d"><a target="open" href="https://www.google.com/search?q=lyrics+不吐不快 
+Hins Cheung">不吐不快</a></font></div>
+Hins Cheung<BR>
+
+Music Level:43
+<form action ="vol.php" method="POST">
+<input type="range" class="slider" min="0" max="100" step="2" value="43" id="foo" name="music_level" onchange='document.getElementById("bar").value = "Slider Value = " + document.getElementById("foo2").value;'/>
+<br>
+<input type=submit value="更改音量" style = "font-size:20px"/>
+</form>
+
+
+<a href="changeSongLRC.php?change2=P"  style = "font-size:20px"/>前一首</a> <> <a href="changeSongLRC.php?change2=N" style = "font-size:20px"/>下一首</a>
+<br>
+</center>
+
+play from : 77.38500213623
+
+<br>
+
+    <style>
+      #lyrics-container {
+        height: 300px;
+        overflow-y: scroll;
+      }
+
+      .lyric-line {
+        margin-bottom: 10px;
+        font-size: 16px;
+        text-align: center;
+        color: #000000; /* Default color for inactive lines */
+        transition: transform 0.3s ease, color 0.3s ease;
+        transform-origin: center;
+        transform: scale(1.0); /* Adjust the scale for the active line */
+      }
+
+      .lyric-line.active {
+        color: #ff0000; /* Color for active line */
+        transform: scale(1.2); /* Adjust the scale for the active line */
+      }
+    </style>
+    <script src="./VanLyricsUtils.js?t=2"></script>
+
+  </head>
+  <body>
+      <div id="lyrics-container"></div>
+    <label for="autoscroll">Auto scroll</label>
+    <input type="checkbox" id="autoscroll" checked="checked" />
+    <script>
+      var inputText = `  [ti:不吐不快]
+[al:P.S. I Love You]
+[ar:Hins Cheung]
+[length: 04:41.57]
+[00:32.20] 為何共那又來又往沒情沒趣無情份的竟比你都更頻繁暢聚
+[00:41.12] 為何遇到別人問好為何和你沒有需要花心機講好說話一句
+[00:48.96] 為何若有無聊事幹便寧願上載到電腦早已忘掉怎跟你吹水
+[00:57.77] 為何難得尚能騰空坐在戲院主角自殺你共我竟過倦而進睡
+[01:05.85] 過去共你 (怎麼去比) 哪理會你 (趕得要死)
+[01:09.76] 也愛用整晚說杜琪峰專長揭露命途無常的道理
+[01:16.90] 講破天地 講到自己
+[01:19.98] 不覺迎面太陽已經昇起
+[01:23.23] 只怕無法再有這種情懷
+[01:27.30] 優美得共你同時在這世界
+[01:32.27] 醜惡在於 赤子的胸懷
+[01:36.15] 難敵這紛擾世態 為理想或求生在捱 (該理解)
+[01:41.92] 沒完沒了各有需要把青春賤賣 (怎逛街)
+[01:46.00] 漸行漸遠每天很快淡出得更快 (這宇宙太大)
+[01:52.15] 握手將要安排 原諒我悲觀過界
+[01:55.91] 但血啃在喉中 不吐不快
+[02:04.17] 為何為了別煩著你別防礙你悠然睡去不忍太早太夜回你電
+[02:12.31] 為何大家為求夢想為求上進沒有空檔分擔怎麼跟壓力挑戰
+[02:20.96] 為何為了未來易過便勤力到忘掉共你兜半晚風不需太多錢
+[02:29.99] 為何大家漸明大體再沒有膽不理夜半有沒有緊要事仍見面
+[02:37.09] 過去共你 (怎麼去比) 哪理會你 (趕得要死)
+[02:42.57] 也愛用整晚暢論人家感情最後為何完結的道理
+[02:48.50] 講破天地 講到自己
+[02:52.13] 不覺殘酷太陽已經昇起
+[02:55.51] 只怕無法再有這種情懷
+[02:59.31] 優美得共你同時在這世界
+[03:03.18] 醜惡在於 赤子的胸懷
+[03:07.60] 難敵這紛擾世態 為理想或求生在捱 (該理解)
+[03:13.65] 沒完沒了各有需要把青春賤賣 (怎逛街)
+[03:17.75] 漸行漸遠每天很快淡出得更快 (這宇宙太大)
+[03:23.45] 握手將要安排 原諒我悲觀過界
+[03:27.55] 但血啃在喉中 不吐不快
+[03:35.68] 如何勤勞 便有甚麼出路
+[03:39.62] 令你與我少了幾里漫步
+[03:43.72] 沒能力坐到老 出世需要進步
+[03:47.53] 你我再好也難逃這個軌道
+[03:54.58] 該理解 沒完沒了各有需要把青春賤賣 (怎逛街)
+[03:59.63] 漸行漸遠每天很快淡出得更快 (這宇宙太大)
+[04:04.70] 握手將要安排 原諒我悲觀過界
+[04:09.32] 但血啃在喉中 不吐不快
+[04:16.74] 任何密友任何伴侶和諧互鬥投緣互信尊敬退縮生疏掛心忽近又遠跟世態搖擺
+[04:27.38] 見慣不會怪
+[04:36.57] `;
+      VanLyricsUtils.setupLyricsContainer("#lyrics-container");
+      VanLyricsUtils.loadLyrics(inputText);
+      VanLyricsUtils.startLyricsTimer();
+      
+      var autoscrollCheckbox = document.getElementById('autoscroll');
+      autoscrollCheckbox.addEventListener('change', function() {
+        VanLyricsUtils.setLyricsAutoScrolling(autoscrollCheckbox.checked);
+      });
+      VanLyricsUtils.skipToTime( 77.38500213623 * 1000 - 500);
+      
+    </script>
+  </body>
+</html>
