@@ -2,6 +2,8 @@
 
 VanLyricsUtils.js is a JavaScript library that provides utility functions for managing and displaying lyrics in a web application.
 
+<img width="682" alt="image" src="https://github.com/VansonLeung/VanLyricsUtils/assets/1129695/3ab60f7b-175e-412d-9f79-9b48ad4144a4">
+
 ## Usage
 
 ### Installation
